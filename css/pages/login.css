@@ -1,0 +1,98 @@
+@import url("../global.css");
+/*  */
+body {
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+main {
+  background-color: white;
+  padding: 70px 15px 50px;
+  border-radius: 20px;
+}
+main .image-side {
+  display: none;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+}
+main form label:not(:last-child) {
+  position: relative;
+}
+main form label:first-child {
+  margin-bottom: 24px;
+}
+main form label:nth-child(2) {
+  margin-bottom: 10px;
+}
+main form label > span {
+  position: absolute;
+  color: var(--text);
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: lighter;
+  transition: all 0.3s;
+}
+main form input:not([type="submit"]) {
+  width: 100%;
+  padding: 13px 10px;
+  background-color: transparent;
+  border: 2px solid var(--bg);
+  border-radius: 5px;
+  outline-color: var(--primary);
+}
+main form input:not([type="submit"]):focus ~ span,
+main form input:not([type="submit"]):valid ~ span {
+  top: 0px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: white;
+  padding: 0 5px;
+}
+main form p {
+  align-self: flex-end;
+  margin-bottom: 12px;
+}
+main form p a {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: light;
+  color: var(--text);
+}
+main form label[for="login"] {
+  align-self: center;
+}
+main form input.login-btn {
+  background-color: var(--primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+main form input.login-btn:hover {
+  background-color: var(--primary-dark);
+}
+main ul.social-links {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+main li.social-item {
+  background-color: var(--bg);
+  padding: 6px 10px;
+  display: flex;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main li.social-item:hover {
+  filter: brightness(0.8);
+}

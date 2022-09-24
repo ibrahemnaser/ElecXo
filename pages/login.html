@@ -5,8 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="../css/pages/login.css" />
   </head>
   <body>
-    Login
+    <div class="container">
+      <main class="login-container">
+        <div class="image-side">
+          <img src="" alt="" />
+          <div class="co-info">
+            <p>Elec<span>Xo</span></p>
+            <h2>Log<span>in</span></h2>
+            <p>Shop the best of electronic, Grab the deals, offers and more.</p>
+          </div>
+        </div>
+        <form action="get">
+          <label for="name">
+            <input type="text" name="username" id="name" required />
+            <span>User Name</span>
+          </label>
+          <label for="password">
+            <input type="password" name="password" id="password" required />
+            <span>Password</span>
+          </label>
+          <p><a href="#">Forget Password ?</a></p>
+          <label for="login">
+            <input
+              type="submit"
+              value="Login"
+              id="login"
+              class="btn login-btn"
+            />
+          </label>
+        </form>
+        <ul class="social-links">
+          <li class="social-item">
+            <img src="../assets/icons/facebook.svg" alt="facebook" />
+          </li>
+          <li class="social-item">
+            <img src="../assets/icons/linkedIn.svg" alt="linkedIn" />
+          </li>
+          <li class="social-item">
+            <img src="../assets/icons/google.svg" alt="google" />
+          </li>
+        </ul>
+      </main>
+    </div>
   </body>
 </html>
