@@ -70,7 +70,7 @@ main form label[for="login"] {
 main form input.login-btn {
   background-color: var(--primary);
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   border: none;
   cursor: pointer;
@@ -79,7 +79,7 @@ main form input.login-btn:hover {
   background-color: var(--primary-dark);
 }
 main ul.social-links {
-  margin-top: 12px;
+  margin: 12px 0 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,4 +95,28 @@ main li.social-item {
 }
 main li.social-item:hover {
   filter: brightness(0.8);
+}
+main hr {
+  position: relative;
+  border-top: 1px dashed var(--text);
+  width: 80%;
+  margin: auto;
+}
+main span.or-span {
+  background-color: white;
+  padding: 5px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+}
+main p.signup-link {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text);
+  position: relative;
+  top: -10px;
+  line-height: 14px;
 }
