@@ -9,12 +9,71 @@ body {
 }
 main {
   background-color: white;
-  padding: 70px 15px 50px;
   border-radius: 20px;
+  max-width: 620px;
+  margin: auto;
 }
+/* media */
+@media (min-width: 600px) {
+  main {
+    display: flex;
+  }
+}
+/*  */
 main .image-side {
   display: none;
+  background-image: url("../../assets/images/signup.jpg");
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 45px 23px;
 }
+/* media */
+@media (min-width: 600px) {
+  main .image-side {
+    display: block;
+    flex-basis: 50%;
+  }
+}
+/*  */
+main .image-side .co-info {
+  max-width: 180px;
+}
+main .image-side p.co-name {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: var(--primary);
+}
+main .image-side p.co-name span {
+  color: var(--tritory);
+}
+main .image-side h2 {
+  font-size: 50px;
+  line-height: 75px;
+  font-width: 700;
+  color: var(--primary);
+}
+main .image-side h2 span {
+  color: var(--tritory);
+}
+main .image-side p:last-child {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 300;
+  color: #393b3a;
+}
+main .form-side {
+  padding-block: 70px 50px;
+  padding-inline: 3%;
+}
+/* media */
+@media (min-width: 600px) {
+  main .form-side {
+    flex-basis: 50%;
+  }
+}
+/*  */
 main form {
   display: flex;
   flex-direction: column;
