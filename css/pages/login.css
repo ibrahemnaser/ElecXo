@@ -56,7 +56,6 @@ main form input:not([type="submit"]):valid ~ span {
 }
 main form p {
   align-self: flex-end;
-  margin-bottom: 12px;
 }
 main form p a {
   font-size: 12px;
@@ -64,9 +63,15 @@ main form p a {
   font-weight: light;
   color: var(--text);
 }
-main form label[for="login"] {
+main form label:last-child {
+  margin-top: 12px;
   align-self: center;
 }
+/* signup style */
+main form label[for="signup"] {
+  margin-top: 20px;
+}
+/*  */
 main form input.login-btn {
   background-color: var(--primary);
   color: white;
