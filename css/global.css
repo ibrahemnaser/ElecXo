@@ -33,13 +33,13 @@ li {
 /*  */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 0 15px;
   margin: auto;
 }
 @media (min-width: 600px) {
   .container {
-    width: 80%;
+    width: 90%;
   }
 }
 

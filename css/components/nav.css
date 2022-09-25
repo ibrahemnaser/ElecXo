@@ -89,6 +89,7 @@ nav .nav-wrapper .nav-menu {
   background-color: var(--bg);
   clip-path: circle(1500px at 90% -20%);
   transition: all 0.9s;
+  z-index: 100;
 }
 nav .nav-wrapper .nav-menu.hide {
   clip-path: circle(100px at 90% -20%);

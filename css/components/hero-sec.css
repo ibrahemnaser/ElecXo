@@ -1,0 +1,111 @@
+/* shared */
+
+/*  */
+.hero-sec .sec-title {
+  width: fit-content;
+  background-image: url("../../assets/images/Rectangle 22.png");
+  padding: 5px 12px;
+  border-radius: 5px;
+  margin-bottom: 22px;
+}
+.hero-sec .sec-title h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+}
+.hero-sec .categories-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+@media (min-width: 600px) {
+  .hero-sec .categories-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1450px) {
+  .hero-sec .categories-list {
+    display: flex;
+    gap: 30px;
+  }
+}
+.hero-sec .categories-list li {
+  min-width: 150px;
+}
+@media (min-width: 1024px) {
+  .hero-sec .categories-list li {
+    min-width: 190px;
+  }
+}
+@media (min-width: 1450px) {
+  .hero-sec .categories-list li {
+    min-width: unset;
+  }
+}
+
+.hero-sec .categories-list .category-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.hero-sec .categories-list .category-item .category-name {
+  position: relative;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 18px;
+  min-width: 60px;
+}
+@media (min-width: 375px) {
+  .hero-sec .categories-list .category-item .category-name {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-sec .categories-list .category-item .category-name {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1450px) {
+  .hero-sec .categories-list .category-item .category-name {
+    min-width: unset;
+  }
+}
+
+.hero-sec .categories-list .category-item .category-name::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 24px;
+  background-color: var(--bg);
+  border: 1px solid var(--text);
+  z-index: -1;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+@media (min-width: 1024px) {
+  .hero-sec .categories-list .category-item .category-name::before {
+    width: 130px;
+    height: 44px;
+  }
+}
+
+.hero-sec .categories-list .category-item .category-img {
+  position: relative;
+  bottom: -3px;
+}
+.hero-sec .categories-list .category-item .category-img img {
+  width: 50px;
+}
+@media (min-width: 1024px) {
+  .hero-sec .categories-list .category-item .category-img img {
+    width: unset;
+  }
+}

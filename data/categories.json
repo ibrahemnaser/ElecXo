@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "name": "Laptops",
+      "img": "./assets/images/category/laptops.png"
+    },
+    {
+      "name": "Camera",
+      "img": "./assets/images/category/camera.png"
+    },
+    {
+      "name": "Accessories",
+      "img": "./assets/images/category/accessories.png"
+    },
+    {
+      "name": "TV",
+      "img": "./assets/images/category/tv.png"
+    },
+    {
+      "name": "Headphones",
+      "img": "./assets/images/category/Headphone.png"
+    },
+    {
+      "name": "Storage",
+      "img": "./assets/images/category/storage.png"
+    },
+    {
+      "name": "Home Theater",
+      "img": "./assets/images/category/theater.png"
+    }
+  ]
+}
