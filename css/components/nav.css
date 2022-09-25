@@ -1,3 +1,44 @@
+/* shared styles */
+.icon-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 12px;
+  width: 45px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.icon-card > svg {
+  transition: all 0.3s;
+}
+.icon-card:hover {
+  background-color: #edecec !important;
+}
+.icon-card:hover > svg {
+  transform: scale(1.07);
+}
+.cart-num {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--primary);
+  width: 16px;
+  height: 20px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+  font-size: 14px;
+  line-height: 10px;
+}
+
+/*  */
 nav {
   padding-block: 30px;
 }
@@ -5,6 +46,8 @@ nav .nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* large screen */
+  gap: 16px;
 }
 nav .nav-wrapper .logo a {
   display: flex;
@@ -20,6 +63,11 @@ nav .nav-wrapper .toggler {
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s;
+}
+@media (min-width: 1024px) {
+  nav .nav-wrapper .toggler {
+    display: none;
+  }
 }
 nav .nav-wrapper .toggler:hover {
   background-color: var(--bg-dark);
@@ -39,7 +87,7 @@ nav .nav-wrapper .nav-menu {
   width: 100%;
   height: 100%;
   background-color: var(--bg);
-  clip-path: circle(1000px at 90% -20%);
+  clip-path: circle(1500px at 90% -20%);
   transition: all 0.9s;
 }
 nav .nav-wrapper .nav-menu.hide {
@@ -57,7 +105,7 @@ nav .nav-wrapper .nav-menu i {
 nav .nav-wrapper .nav-menu i:hover {
   transform: scale(1.08);
 }
-nav .nav-wrapper .menu-search {
+nav .nav-wrapper .nav-menu .menu-search {
   display: flex;
   gap: 20px;
   position: absolute;
@@ -70,58 +118,20 @@ nav .nav-wrapper .menu-search {
   row-gap: 22px;
   width: 80%;
 }
-nav .nav-wrapper .menu-search > div {
+nav .nav-wrapper .nav-menu .menu-search > div {
   display: flex;
 }
-nav .nav-wrapper .menu-search .search-input {
+nav .nav-wrapper .nav-menu .menu-search .search-input {
   width: 100%;
 }
-nav .nav-wrapper .menu-search .search-input input {
+nav .nav-wrapper .nav-menu .menu-search .search-input input {
   padding: 12px 8px;
   border: none;
   border-radius: 5px;
   width: 100%;
 }
-nav .nav-wrapper .menu-search .search-input input:focus {
+nav .nav-wrapper .nav-menu .menu-search .search-input input:focus {
   outline: 2px solid var(--text);
-}
-nav .nav-wrapper .menu-search > div[class$="icon"] {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  padding: 12px;
-  width: 45px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-nav .nav-wrapper .menu-search > div[class$="icon"] > svg {
-  transition: all 0.3s;
-}
-nav .nav-wrapper .menu-search .cart-icon span {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: var(--primary);
-  width: 16px;
-  height: 20px;
-  border-radius: 5px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 4px;
-  font-size: 14px;
-  line-height: 10px;
-}
-nav .nav-wrapper .menu-search > div[class$="icon"]:hover {
-  background-color: #edecec;
-}
-nav .nav-wrapper .menu-search > div[class$="icon"]:hover > svg {
-  transform: scale(1.07);
 }
 nav .nav-wrapper .nav-menu ul {
   position: absolute;
@@ -141,4 +151,35 @@ nav .nav-wrapper .nav-menu ul li {
 }
 nav .nav-wrapper .nav-menu ul li:hover {
   transform: translateX(10px) scale(1.06);
+}
+/* large screen */
+nav .nav-menu__xl {
+  display: none;
+}
+nav .nav-wrapper .nav-menu__xl > div.icon-card {
+  background-color: var(--bg);
+}
+nav .nav-wrapper .nav-menu__xl .search-input {
+  display: flex;
+  flex-basis: 100%;
+}
+nav .nav-wrapper .nav-menu__xl .search-input input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--text);
+  outline: 2px solid transparent;
+}
+nav .nav-wrapper .nav-menu__xl .search-input input:focus {
+  outline: 2px solid var(--primary);
+  border-color: transparent;
+}
+@media (min-width: 1024px) {
+  nav .nav-menu__xl {
+    display: flex;
+    flex-basis: 100%;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
 }
