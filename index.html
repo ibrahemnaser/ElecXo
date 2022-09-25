@@ -15,6 +15,8 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- JS -->
+    <script defer type="module" src="js/main.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -22,10 +24,21 @@
       <div class="container">
         <div class="nav-wrapper">
           <div class="logo">
-            <img src="./assets/images/Elecxo 1.png" alt="logo" />
+            <a href="#">
+              <img src="./assets/images/Elecxo 1.png" alt="logo" />
+            </a>
           </div>
-          <div class="toggler">
+          <div class="toggler" id="toggle-icon">
             <i class="fa-solid fa-sliders"></i>
+          </div>
+          <div class="nav-menu hide" id="res-menu">
+            <i class="fa-solid fa-xmark" id="close-menu"></i>
+            <ul class="menu-links">
+              <li>Home</li>
+              <li>Products</li>
+              <li>About Us</li>
+              <li>Contact</li>
+            </ul>
           </div>
         </div>
       </div>
