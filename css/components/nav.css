@@ -1,0 +1,21 @@
+nav {
+  padding-block: 30px;
+}
+nav .nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .nav-wrapper .logo {
+  display: flex;
+}
+nav .nav-wrapper .toggler {
+  background-color: var(--bg);
+  padding: 14px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+nav .nav-wrapper .toggler i {
+  font-size: 22px;
+  color: var(--text);
+}
