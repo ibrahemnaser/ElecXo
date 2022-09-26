@@ -2,4 +2,5 @@
 
 /* Components */
 @import url("./components/nav.css");
-@import url("./components/hero-sec.css");
+@import url("./components/categories.css");
+@import url("./components/slider.css");
