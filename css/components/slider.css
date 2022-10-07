@@ -33,6 +33,7 @@
   height: 100%;
   transform: translateY(var(--translate-value));
   transition: 0.5s;
+  user-select: none;
 }
 .hero-sec .slider .slider-feature .feature-one .feature-img img {
   width: 130px;

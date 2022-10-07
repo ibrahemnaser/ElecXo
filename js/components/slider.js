@@ -4,29 +4,33 @@ let translationVariable;
 
 let clicked = false;
 let xAxis;
-let x;
+let startX;
 
 export default function sliderFun() {
   [...featureItem].forEach((ele) => {
-    ele.addEventListener("touchstart", (e) => {
-      console.log(e);
-    });
     ele.addEventListener("mouseup", () => {
       sliderContainer.style.cursor = "grap";
     });
+
     ele.addEventListener("mousedown", (e) => {
+      startX = e.offsetX;
       e.target.style.cursor = "grapping";
       translationVariable =
         getComputedStyle(sliderContainer).getPropertyValue("--translate-value");
       clicked = true;
     });
+
     window.addEventListener("mouseup", () => {
       clicked = false;
     });
+
     ele.addEventListener("mousemove", (e) => {
       if (!clicked) return;
 
-      if (e.offsetX < 200) {
+      e.preventDefault();
+
+      console.log(startX - e.offsetX);
+      if (startX - e.offsetX > 200) {
         if (parseInt(translationVariable) === 0) {
           sliderContainer.style.setProperty("--translate-value", "-100%");
           clicked = false;
@@ -37,7 +41,7 @@ export default function sliderFun() {
         }
       }
 
-      if (e.offsetX > 800) {
+      if (startX - e.offsetX < -200) {
         console.log(parseInt(translationVariable));
         if (parseInt(translationVariable) === -200) {
           sliderContainer.style.setProperty("--translate-value", "-100%");
