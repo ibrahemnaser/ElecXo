@@ -3,12 +3,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  row-gap: 20px;
 }
 .hero-sec .slider .slider-feature {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  --translate-value: 0%;
+  display: block;
+  overflow: hidden;
+  cursor: grab;
   flex: 1 1 100%;
   height: 215px;
   background-image: linear-gradient(20deg, #bdff0063 30%, #79e7ff);
@@ -16,10 +17,11 @@
 }
 @media (min-width: 1024px) {
   .hero-sec .slider {
-    gap: 30px;
+    flex-wrap: nowrap;
+    column-gap: 10px;
   }
   .hero-sec .slider .slider-feature {
-    flex: 1 1 80%;
+    flex: 1 1 84%;
     order: 1;
     height: 315px;
   }
@@ -28,6 +30,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
+  transform: translateY(var(--translate-value));
+  transition: 0.5s;
 }
 .hero-sec .slider .slider-feature .feature-one .feature-img img {
   width: 130px;
@@ -46,6 +51,7 @@
   }
 }
 .hero-sec .slider .static-feature > div {
+  position: relative;
   width: 135px;
   height: 150px;
   border-radius: 5px;
@@ -53,7 +59,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
 }
 .hero-sec .slider .static-feature > div img {
   width: 100px;
@@ -66,6 +71,7 @@
   padding: 8px 20px;
   width: 100%;
   text-align: center;
+  border-bottom-left-radius: 5px;
 }
 .hero-sec .slider .static-feature .feature-new {
   background-color: #393b3a;
@@ -78,4 +84,24 @@
 }
 .hero-sec .slider .static-feature .feature-off .feature-footer {
   background-image: linear-gradient(to right, #084450, #d9d9d957);
+}
+.hero-sec .slider .static-feature span {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: white;
+}
+.hero-sec .slider .static-feature .feature-new span.feature-label {
+  background-color: var(--secondary);
+  padding: 3px 7px;
+  font-size: 8px;
+  line-height: 12px;
+}
+.hero-sec .slider .static-feature .feature-off span.feature-label {
+  background-color: #ff7b7b;
+  padding: 4px 4px;
+  font-size: 7px;
+  line-height: 10px;
 }
